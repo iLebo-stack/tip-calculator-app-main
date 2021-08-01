@@ -1,0 +1,11 @@
+@mixin space {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+@mixin inputs {
+    background-repeat: no-repeat;
+    background-position: 10px center;    
+}

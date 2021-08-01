@@ -1,0 +1,268 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 24px;
+  font-family: "Space Mono", monospace;
+}
+
+body h2 {
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+#main {
+  padding-top: 150px;
+}
+
+body {
+  background-color: #c5e4e7;
+  color: #00494d;
+  position: relative;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  max-width: 400px;
+  border-radius: 15px 15px 0 0;
+  margin: auto;
+  padding-bottom: 5px;
+}
+
+input[type=number] {
+  border: none;
+  padding: 10px;
+  width: 100%;
+  background-color: #f4fafa;
+  color: #00494d;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: right;
+}
+
+.button__normal {
+  background-color: #00494d;
+  border: none;
+  padding: 15px 60px;
+  width: 140px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  margin-bottom: 10px;
+  cursor: pointer;
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+}
+
+.button__normal:hover {
+  background-color: #c5e4e7;
+  color: #00494d;
+}
+
+.btns #custom {
+  background-color: #f4fafa;
+  color: #00494d;
+  width: 140px;
+}
+
+.white {
+  padding: 30px;
+}
+
+.cyan {
+  background-color: #00494d;
+  color: white;
+  margin: 30px;
+  padding: 20px;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cyan button {
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: none;
+  background-color: #26c0ab;
+  cursor: pointer;
+}
+
+.cyan button:hover {
+  background-color: #c5e4e7;
+}
+
+.cyan .tipAmount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cyan .total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.cyan .per {
+  color: #7f9c9f;
+}
+
+.cyan .cyan_numbers {
+  color: #26c0ab;
+}
+
+#logo {
+  display: block;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: absolute;
+  left: 50%;
+  top: 70px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.bill input[type=number] {
+  background-image: url(/images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.people input[type=number] {
+  background-image: url(/images/icon-person.svg);
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+
+.people #errorMsg {
+  color: red;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.error {
+  border: thin red solid;
+}
+
+.active__state {
+  background-color: #26c0ab;
+  border: none;
+  padding: 15px 60px;
+  width: 140px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 786px) {
+  .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 80%;
+    border-radius: 15px;
+  }
+  #five button {
+    grid-area: one;
+  }
+  #ten button {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: ten;
+  }
+  #fifteen button {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: fifteen;
+  }
+  #twentyFive button {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: twentyfive;
+  }
+  #fifty button {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: fifty;
+  }
+  #custom {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    grid-area: custom;
+  }
+  .btns {
+    display: -ms-grid;
+    display: grid;
+    gap: 15px;
+        grid-template-areas: "five ten fifteen" "twentyfive fifty custom";
+  }
+  .cyan {
+    width: 100%;
+    position: relative;
+  }
+  .cyan #reset {
+    position: absolute;
+    bottom: 15px;
+    width: 92%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

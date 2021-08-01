@@ -1,0 +1,173 @@
+@import "globals";
+@import "colors";
+@import "functions";
+
+body {
+    background-color: $LGC;
+    color: $VDC;
+    position: relative;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: $White;
+    max-width: 400px;
+    border-radius: 15px 15px 0 0;
+    margin: auto;
+    padding-bottom: 5px;
+}
+input[type=number] {
+    border: none;
+    padding: 10px;
+    width: 100%;
+    background-color: $LGCL;
+    color: $VDC;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: right;
+}
+.button__normal {
+    background-color: $VDC;
+    border: none;
+    padding: 15px 60px;
+    width: 140px;
+    text-align: center;
+    border-radius: 5px;
+    color: $White;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+    &:hover {
+        background-color: $LGC;
+        color: $VDC;
+    }
+}
+.btns #custom {
+    background-color: $LGCL;
+    color: $VDC;
+    width: 140px;
+}
+.white {
+    padding: 30px;
+}
+.cyan {
+    background-color: $VDC;
+    color: $White;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    button {
+        padding: 10px 30px;
+        border-radius: 5px;
+        border: none ;
+        background-color: $SC;
+        cursor: pointer;
+        &:hover {
+            background-color: $LGC;
+        }
+    }
+    .tipAmount {
+        @include space();
+        
+    }
+    .total {
+        @include space();
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+    .per {
+        color: $DGCL;
+    }
+    .cyan_numbers {
+        color: $SC;
+    }
+}
+#logo {
+    display: block;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: absolute;
+    left: 50%;
+    top: 70px;
+    transform: translate(-50%,-50%);
+}
+.bill input[type=number] {
+    background-image: url(/images/icon-dollar.svg);
+    @include inputs();
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.people input[type=number] {
+    background-image: url(/images/icon-person.svg);
+    //border: $error solid thin;
+    @include inputs();
+}
+.people #errorMsg {
+    color: $error;
+}
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.error {
+    border: thin $error solid;
+}
+.active__state {
+    background-color: $SC;
+    border: none;
+    padding: 15px 60px;
+    width: 140px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 786px) {
+    .container {
+        flex-direction: row;
+        max-width: 80%;
+        border-radius: 15px;
+    }    
+    #five button {
+        grid-area: one;
+    }
+    #ten button{
+        grid-area: ten;
+    }
+    #fifteen button{
+        grid-area: fifteen;
+    }
+    #twentyFive button{
+        grid-area: twentyfive;
+    }
+    #fifty button{
+        grid-area: fifty;
+    }
+    #custom {
+        grid-area: custom;
+    }
+    .btns {
+        display: grid;
+        gap: 15px;
+        grid-template-areas: 
+        "five ten fifteen"
+        "twentyfive fifty custom";
+    }
+    .cyan {
+        width: 100%;
+        position: relative;
+        #reset {
+            position: absolute;
+            bottom: 15px;
+            width: 92%;
+        }
+    }
+}
