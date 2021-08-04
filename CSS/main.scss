@@ -25,6 +25,7 @@ input[type=number] {
     font-weight: bold;
     font-size: 20px;
     text-align: right;
+    transition: 250ms ease-in-out;
 }
 .button__normal {
     background-color: $VDC;
@@ -34,12 +35,20 @@ input[type=number] {
     text-align: center;
     border-radius: 5px;
     color: $White;
+    font-weight: 700;
     margin-bottom: 10px;
     cursor: pointer;
-    transition: 250ms ease-in-out;
+
     &:hover {
         background-color: $LGC;
         color: $VDC;
+    }
+}
+.tip input[type=number] {
+    border: solid 2.5px transparent;
+    outline: none;
+    &:focus, &:hover {
+        border: solid 2.5px $SC;
     }
 }
 .btns #custom {
@@ -62,8 +71,10 @@ input[type=number] {
         padding: 10px 30px;
         border-radius: 5px;
         border: none ;
+        font-weight: 700;
         background-color: $SC;
         cursor: pointer;
+        color: $VDC;
         &:hover {
             background-color: $LGC;
         }
@@ -95,28 +106,40 @@ input[type=number] {
 }
 .bill input[type=number] {
     background-image: url(/images/icon-dollar.svg);
+    border: transparent solid 2.5px;
     @include inputs();
+    outline: none;
+    &:focus, &:hover {
+        border: 2.5px solid $SC;
+    }
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
 .people input[type=number] {
     background-image: url(/images/icon-person.svg);
-    //border: $error solid thin;
     @include inputs();
+    outline: none;
+    border: transparent solid 2.5px;
+    &:focus, &:hover {
+        border: 2.5px solid $SC;
+    }
 }
-.people #errorMsg {
-    color: $error;
+
+
+.error_borders {
+    border: $error thin solid;
 }
 .header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.error {
-    border: thin $error solid;
+#errorMsg {
+    color: $error;
 }
 .active__state {
     background-color: $SC;
@@ -125,9 +148,12 @@ input::-webkit-inner-spin-button {
     width: 140px;
     text-align: center;
     border-radius: 5px;
-    color: white;
+    color: $VDC;
     margin-bottom: 10px;
     cursor: pointer;
+}
+#error__borders {
+    border: $error solid 2.5px;
 }
 
 @media screen and (min-width: 786px) {
@@ -164,10 +190,6 @@ input::-webkit-inner-spin-button {
     .cyan {
         width: 100%;
         position: relative;
-        #reset {
-            position: absolute;
-            bottom: 15px;
-            width: 92%;
-        }
+        justify-content: space-around;
     }
 }

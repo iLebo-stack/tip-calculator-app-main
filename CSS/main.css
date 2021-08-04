@@ -50,6 +50,8 @@ input[type=number] {
   font-weight: bold;
   font-size: 20px;
   text-align: right;
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
 }
 
 .button__normal {
@@ -60,15 +62,23 @@ input[type=number] {
   text-align: center;
   border-radius: 5px;
   color: white;
+  font-weight: 700;
   margin-bottom: 10px;
   cursor: pointer;
-  -webkit-transition: 250ms ease-in-out;
-  transition: 250ms ease-in-out;
 }
 
 .button__normal:hover {
   background-color: #c5e4e7;
   color: #00494d;
+}
+
+.tip input[type=number] {
+  border: solid 2.5px transparent;
+  outline: none;
+}
+
+.tip input[type=number]:focus, .tip input[type=number]:hover {
+  border: solid 2.5px #26c0ab;
 }
 
 .btns #custom {
@@ -100,8 +110,10 @@ input[type=number] {
   padding: 10px 30px;
   border-radius: 5px;
   border: none;
+  font-weight: 700;
   background-color: #26c0ab;
   cursor: pointer;
+  color: #00494d;
 }
 
 .cyan button:hover {
@@ -163,8 +175,14 @@ input[type=number] {
 
 .bill input[type=number] {
   background-image: url(/images/icon-dollar.svg);
+  border: transparent solid 2.5px;
   background-repeat: no-repeat;
   background-position: 10px center;
+  outline: none;
+}
+
+.bill input[type=number]:focus, .bill input[type=number]:hover {
+  border: 2.5px solid #26c0ab;
 }
 
 input::-webkit-outer-spin-button,
@@ -177,10 +195,16 @@ input::-webkit-inner-spin-button {
   background-image: url(/images/icon-person.svg);
   background-repeat: no-repeat;
   background-position: 10px center;
+  outline: none;
+  border: transparent solid 2.5px;
 }
 
-.people #errorMsg {
-  color: red;
+.people input[type=number]:focus, .people input[type=number]:hover {
+  border: 2.5px solid #26c0ab;
+}
+
+.error_borders {
+  border: #ff4747 thin solid;
 }
 
 .header {
@@ -196,8 +220,8 @@ input::-webkit-inner-spin-button {
           justify-content: space-between;
 }
 
-.error {
-  border: thin red solid;
+#errorMsg {
+  color: #ff4747;
 }
 
 .active__state {
@@ -207,9 +231,13 @@ input::-webkit-inner-spin-button {
   width: 140px;
   text-align: center;
   border-radius: 5px;
-  color: white;
+  color: #00494d;
   margin-bottom: 10px;
   cursor: pointer;
+}
+
+#error__borders {
+  border: #ff4747 solid 2.5px;
 }
 
 @media screen and (min-width: 786px) {
@@ -258,11 +286,8 @@ input::-webkit-inner-spin-button {
   .cyan {
     width: 100%;
     position: relative;
-  }
-  .cyan #reset {
-    position: absolute;
-    bottom: 15px;
-    width: 92%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 /*# sourceMappingURL=main.css.map */
