@@ -174,7 +174,7 @@ input[type=number] {
 }
 
 .bill input[type=number] {
-  background-image: url(/images/icon-dollar.svg);
+  background-image: url(images/icon-dollar.svg);
   border: transparent solid 2.5px;
   background-repeat: no-repeat;
   background-position: 10px center;
@@ -192,7 +192,7 @@ input::-webkit-inner-spin-button {
 }
 
 .people input[type=number] {
-  background-image: url(/images/icon-person.svg);
+  background-image: url(images/icon-person.svg);
   background-repeat: no-repeat;
   background-position: 10px center;
   outline: none;
@@ -281,7 +281,8 @@ input::-webkit-inner-spin-button {
     display: -ms-grid;
     display: grid;
     gap: 15px;
-        grid-template-areas: "five ten fifteen" "twentyfive fifty custom";
+        grid-template-areas: "five ten fifteen"
+ "twentyfive fifty custom";
   }
   .cyan {
     width: 100%;
